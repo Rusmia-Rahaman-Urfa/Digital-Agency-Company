@@ -1,4 +1,51 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+const FAQItem = ({ number, question, answer }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className={`p-8 transition-colors bg-[#0A0A0A] ${isOpen ? 'bg-white/[0.02]' : ''}`}>
+      <div 
+        className="flex items-start gap-6 cursor-pointer group" 
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="text-2xl font-bold bg-[#1A1A1A] border border-white/10 w-12 h-12 flex items-center justify-center rounded-xl text-gray-400 group-hover:text-[#C1FF00] transition-colors">
+          {number}
+        </span>
+        <div className="flex-1">
+          <div className="flex items-center justify-between">
+            <h3 className={`text-lg font-semibold transition-colors ${isOpen ? 'text-[#C1FF00]' : 'text-white'}`}>
+              {question}
+            </h3>
+            <span className="ml-4 text-white">
+              {isOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" /></svg>
+              )}
+            </span>
+          </div>
+          {isOpen && (
+            <p className="mt-4 text-gray-400 leading-relaxed text-sm animate-fadeIn">
+              {answer}
+            </p>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const faqData = [
+  { number: "01", question: "What services does SquareUp provide?", answer: "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more." },
+  { number: "02", question: "How can SquareUp help my business?", answer: "We help businesses by creating high-performance digital products that drive growth, enhance user engagement, and streamline internal operations." },
+  { number: "03", question: "What industries does SquareUp work with?", answer: "We work with startups, enterprise leaders, media publishers, and social good organizations across various sectors including Fintech, Health, and E-commerce." },
+  { number: "04", question: "How long does it take to complete a project?", answer: "Timeline depends on complexity. Typical design phases take 4-6 weeks, while full engineering builds range from 3 to 6 months." },
+  { number: "05", question: "Do you offer ongoing support?", answer: "Yes, we provide long-term maintenance, security updates, and performance optimization post-launch." },
+  { number: "06", question: "Can you work with existing frameworks?", answer: "Absolutely. We can integrate with your current tech stack or help you migrate to more modern solutions." },
+  { number: "07", question: "How involved will I be in the process?", answer: "We follow a highly collaborative approach with weekly check-ins and transparent project tracking via Slack and Jira." },
+  { number: "08", question: "Can you help with app maintenance?", answer: "Yes, we offer dedicated support packages to ensure your app stays updated with the latest OS versions and security patches." },
+];
 
 const Home = () => {
   return (
@@ -304,7 +351,21 @@ const Home = () => {
               <button className="px-4 py-2 bg-[#262626] text-xs font-semibold rounded-lg hover:bg-[#333] transition">Open Website</button>
             </div>
           </div>
+          </div>
+      </section>
+      {/* FAQ SECTION */}
+      <section className="py-24 px-6 md:px-16 border-t border-white/5 relative">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Still have any questions? Contact our Team via hello@squareup.com
+          </p>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10 rounded-3xl overflow-hidden">
+          {faqData.map((faq, index) => (
+            <FAQItem key={index} number={faq.number} question={faq.question} answer={faq.answer} />
+          ))}
         </div>
       </section>
       </div>
