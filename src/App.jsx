@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import Home from './assets/components/Home';
 function App(){
   return(
