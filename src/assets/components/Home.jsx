@@ -203,6 +203,107 @@ const Home = () => {
               We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.
             </p>
           </div>
+          </div>
+      </section>
+      {/* TESTIMONIALS SECTION */}
+      <section className="py-24 px-6 md:px-16 border-t border-white/5 relative">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">What our Clients say About us</h2>
+          <p className="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us.
+          </p>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-white/10 rounded-3xl overflow-hidden bg-[#0F0F0F]">
+          
+          {/* Testimonial 1 */}
+          <div className="p-10 border-b md:border-r border-white/10 flex flex-col justify-between">
+            <div>
+              <h3 className="text-[#C1FF00] text-xl font-semibold mb-4">SquareUp has been Instrumental in Transforming our Online Presence.</h3>
+              <p className="text-gray-400 leading-relaxed mb-10 text-sm">
+                Their team's expertise in web development and design resulted in a visually stunning and user-friendly e-commerce platform. Our online sales have skyrocketed, and we couldn't be happier.
+              </p>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-[#1A1A1A] rounded-2xl border border-white/5">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-xl overflow-hidden">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=John" alt="User" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm">John Smith</h4>
+                  <p className="text-gray-500 text-xs">CEO of Chic Boutique</p>
+                </div>
+              </div>
+              <button className="px-4 py-2 bg-[#262626] text-xs font-semibold rounded-lg hover:bg-[#333] transition">Open Website</button>
+            </div>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className="p-10 border-b border-white/10 flex flex-col justify-between">
+            <div>
+              <h3 className="text-[#C1FF00] text-xl font-semibold mb-4">Working with SquareUp was a breeze.</h3>
+              <p className="text-gray-400 leading-relaxed mb-10 text-sm">
+                They understood our vision for a mobile app that streamlined our food delivery service. The app they delivered exceeded our expectations, and our customers love the seamless ordering experience. SquareUp is a trusted partner we highly recommend.
+              </p>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-[#1A1A1A] rounded-2xl border border-white/5">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-xl overflow-hidden">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" alt="User" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm">Sarah Johnson</h4>
+                  <p className="text-gray-500 text-xs">Founder of HungryBites</p>
+                </div>
+              </div>
+              <button className="px-4 py-2 bg-[#262626] text-xs font-semibold rounded-lg hover:bg-[#333] transition">Open Website</button>
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="p-10 border-b md:border-b-0 md:border-r border-white/10 flex flex-col justify-between">
+            <div>
+              <h3 className="text-[#C1FF00] text-xl font-semibold mb-4">SquareUp developed a comprehensive booking and reservation system.</h3>
+              <p className="text-gray-400 leading-relaxed mb-10 text-sm">
+                Their attention to detail and commitment to delivering a user-friendly platform was evident throughout the project. The system has streamlined our operations and enhanced our clients' event experiences.
+              </p>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-[#1A1A1A] rounded-2xl border border-white/5">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-xl overflow-hidden">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mark" alt="User" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm">Mark Thompson</h4>
+                  <p className="text-gray-500 text-xs">CEO of EventMasters</p>
+                </div>
+              </div>
+              <button className="px-4 py-2 bg-[#262626] text-xs font-semibold rounded-lg hover:bg-[#333] transition">Open Website</button>
+            </div>
+          </div>
+
+          {/* Testimonial 4 */}
+          <div className="p-10 flex flex-col justify-between">
+            <div>
+              <h3 className="text-[#C1FF00] text-xl font-semibold mb-4">ProTech Solutions turned to SquareUp to automate our workflow</h3>
+              <p className="text-gray-400 leading-relaxed mb-10 text-sm">
+                They delivered an exceptional custom software solution. The system has significantly increased our productivity and reduced manual errors. SquareUp's expertise and professionalism have made them a trusted technology partner.
+              </p>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-[#1A1A1A] rounded-2xl border border-white/5">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-gray-700 rounded-xl overflow-hidden">
+                  <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Laura" alt="User" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-sm">Laura Adams</h4>
+                  <p className="text-gray-500 text-xs">COO of ProTech Solutions</p>
+                </div>
+              </div>
+              <button className="px-4 py-2 bg-[#262626] text-xs font-semibold rounded-lg hover:bg-[#333] transition">Open Website</button>
+            </div>
+          </div>
 
         </div>
       </section>
