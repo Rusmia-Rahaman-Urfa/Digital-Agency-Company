@@ -132,8 +132,81 @@ const Home = () => {
 
         </div>
       </section>
+      {/* WHY CHOOSE SQUAREUP SECTION */}
+      <section className="py-24 px-6 md:px-16 border-t border-white/5 relative">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Why Choose SquareUp?</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Experience excellence in digital craftsmanship with our team of skilled professionals dedicated to delivering exceptional results.
+          </p>
+        </div>
 
-    </div>
+        {/* 2x2 Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 border border-white/10 rounded-3xl overflow-hidden bg-[#0F0F0F]">
+          
+          {/* 1. Expertise */}
+          <div className="p-10 border-b md:border-r border-white/10 hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-[#1A1A1A] border border-white/10 rounded-lg flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#C1FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Expertise</h3>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              Our team consists of highly skilled professionals who have a deep understanding of the digital landscape. We stay updated with the latest industry trends and best practices to deliver cutting-edge solutions.
+            </p>
+          </div>
+
+          {/* 2. Client-Centric Approach */}
+          <div className="p-10 border-b border-white/10 hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-[#1A1A1A] border border-white/10 rounded-lg flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#C1FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Client-Centric Approach</h3>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              We prioritize our clients and their unique needs. We listen to your ideas, challenges, and goals, and tailor our services to meet your specific requirements. Your success is our success.
+            </p>
+          </div>
+
+          {/* 3. Results-Driven Solutions */}
+          <div className="p-10 border-b md:border-b-0 md:border-r border-white/10 hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-[#1A1A1A] border border-white/10 rounded-lg flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#C1FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Results-Driven Solutions</h3>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              Our primary focus is on delivering results. We combine creativity and technical expertise to create digital products that drive business growth, enhance user experiences, and provide a competitive advantage.
+            </p>
+          </div>
+
+          {/* 4. Collaborative Partnership */}
+          <div className="p-10 hover:bg-white/[0.02] transition-colors group">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-[#1A1A1A] border border-white/10 rounded-lg flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#C1FF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-4.514A9.01 9.01 0 0012 15c1.289 0 2.498.318 3.555.882m-3.555-4.118V5a2 2 0 114 0v1m-4 4H9m4 0h2m-2 4h.01M9 16H5m4 0v1a2 2 0 01-2 2H5a2 2 0 01-2-2v-1m4 0h2" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold">Collaborative Partnership</h3>
+            </div>
+            <p className="text-gray-400 leading-relaxed">
+              We value long-term relationships with our clients. We see ourselves as your digital partner, providing ongoing support, maintenance, and updates to ensure your digital products continue to thrive.
+            </p>
+          </div>
+
+        </div>
+      </section>
+      </div>
   );
 };
 
