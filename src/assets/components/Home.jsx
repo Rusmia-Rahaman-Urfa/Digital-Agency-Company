@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+
 const FAQItem = ({ number, question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -119,8 +119,7 @@ const Home = () => {
            </span>
         </div>
         
-        {/* Fixed Logo Grid */}
-      {/* Fixed Logo Grid */}
+      {/* Logo Grid */}
     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-80 transition-all duration-500 px-6">
       <img src="https://cdn.worldvectorlogo.com/logos/zapier.svg" className="h-7 md:h-9 invert" alt="Zapier" />
       <img src="https://cdn.worldvectorlogo.com/logos/spotify-2.svg" className="h-7 md:h-9 invert" alt="Spotify" />
@@ -368,7 +367,91 @@ const Home = () => {
           ))}
         </div>
       </section>
+      {/* THANK YOU / CONTACT SECTION */}
+<section className="bg-[#0a0a0a] text-white py-20 px-4">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Header with Background Grid */}
+    <div className="relative text-center mb-16 p-12 border border-zinc-800 rounded-2xl overflow-hidden">
+      {/* Mountain/Grid Background Overlay */}
+      <img 
+        src="/Hero Section.png" 
+        alt="background" 
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-20 pointer-events-none"
+      />
+      
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="bg-[#c1ff00] p-3 rounded-lg mb-6">
+          <img src="/vite.svg" alt="SquareUp Logo" className="w-8 h-8" />
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Thank you for your Interest in SquareUp.</h2>
+        <p className="text-zinc-400 max-w-2xl mx-auto mb-8">
+          We would love to hear from you and discuss how we can help bring your digital ideas to life. 
+          Here are the different ways you can get in touch with us.
+        </p>
+        <button className="bg-[#c1ff00] text-black font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition">
+          Start Project
+        </button>
       </div>
+    </div>
+
+    {/* Contact Form Container */}
+    <div className="bg-[#111111] p-8 md:p-12 rounded-2xl border border-zinc-800">
+      <form className="space-y-8">
+        {/* Name and Email Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col">
+            <label className="mb-2 font-medium">Full Name</label>
+            <input type="text" placeholder="Type here" className="bg-[#1a1a1a] border-b border-zinc-700 p-4 rounded-t-lg focus:outline-none focus:border-[#c1ff00]" />
+          </div>
+          <div className="flex flex-col">
+            <label className="mb-2 font-medium">Email</label>
+            <input type="email" placeholder="Type here" className="bg-[#1a1a1a] border-b border-zinc-700 p-4 rounded-t-lg focus:outline-none focus:border-[#c1ff00]" />
+          </div>
+        </div>
+
+        {/* Why are you contacting us? */}
+        <div>
+          <label className="block mb-4 font-medium">Why are you contacting us?</label>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {['Web Design', 'Collaboration', 'Mobile App Design', 'Others'].map((item) => (
+              <div key={item} className="flex items-center space-x-3 bg-[#1a1a1a] p-4 rounded-lg">
+                <input type="checkbox" className="w-5 h-5 accent-[#c1ff00]" />
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Budget Slider */}
+        <div>
+          <label className="block mb-4 font-medium">Your Budget</label>
+          <p className="text-sm text-zinc-500 mb-4">Slide to indicate your budget range</p>
+          <input type="range" className="w-full accent-[#c1ff00]" min="1000" max="5000" />
+          <div className="flex justify-between text-sm mt-2 text-zinc-400">
+            <span>$1000</span>
+            <span>$5000</span>
+          </div>
+        </div>
+
+        {/* Message */}
+        <div className="flex flex-col">
+          <label className="mb-2 font-medium">Your Message</label>
+          <textarea placeholder="Type here" rows="4" className="bg-[#1a1a1a] border-b border-zinc-700 p-4 rounded-t-lg focus:outline-none focus:border-[#c1ff00]"></textarea>
+        </div>
+
+        {/* Submit */}
+        <div className="text-center">
+          <button type="submit" className="bg-[#c1ff00] text-black font-bold py-4 px-12 rounded-lg hover:bg-opacity-90 transition">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+</div>
   );
 };
 
